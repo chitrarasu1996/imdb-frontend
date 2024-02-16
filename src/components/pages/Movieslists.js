@@ -59,9 +59,10 @@ const data=localStorage.getItem("token")
   }
  
   return (
+
     <Layout>
     <div className='all-movies-list p-2 text-white'>
-      <div >
+      <div>
         {allMovies.length > 0 ? (
           <div className='movie-container ps-3'>
             {allMovies.map((movie, i) => (
@@ -87,7 +88,7 @@ const data=localStorage.getItem("token")
                   {token?
                 <Link to={`/editmovie-details/${movie._id}`}><button className='btn mb-2 hidden' style={{backgroundColor:"#E2B616",width:"100%"}}>Edit</button></Link>  
                   :<div>
-                 <Link to={"/login"}><button className='btn p-2 mb-2' style={{backgroundColor:"#E2B616"}}>login to edit the deatils</button> </Link>
+                 <Link to={"/login"}><button className='btn p-2 mb-2' style={{backgroundColor:"#E2B616"}}>login to edit the details</button> </Link>
                     </div>}
                 </div>
               </div>
