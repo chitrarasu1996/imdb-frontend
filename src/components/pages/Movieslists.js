@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Layout from '../Layout/Layout'
 import { Link, useNavigate } from 'react-router-dom'
 import { getAllMoviesLists } from '../../service/APIcalls'
+import { MdEdit } from "react-icons/md";
 import toast from 'react-hot-toast'
 import { mycontext } from '../../App'
 
@@ -86,9 +87,9 @@ const data=localStorage.getItem("token")
                 <div>Producer : <span className='moviesDetails'>{movie.producer.producerName.substring(0,11)}</span></div>
                 <div className=' button-container pe-2'>
                   {token?
-                <Link to={`/editmovie-details/${movie._id}`}><button className='btn mb-2 hidden' style={{backgroundColor:"#E2B616",width:"100%"}}>Edit</button></Link>  
+                <Link style={{textDecoration:"none"}} className='d-flex gap-2' to={`/editmovie-details/${movie._id}`}><button className='btn mb-2 hidden' style={{backgroundColor:"#E2B616",width:"100%"}}> <span> <MdEdit size={25}/></span>  <span >Edit</span></button></Link>  
                   :<div>
-                 <Link to={"/login"}><button className='btn p-2 mb-2' style={{backgroundColor:"#E2B616"}}>login to edit the details</button> </Link>
+                 <Link to={"/login"}><button className='btn p-1 mb-1' style={{backgroundColor:"#E2B616"}}> login to edit the details</button> </Link>
                     </div>}
                 </div>
               </div>
