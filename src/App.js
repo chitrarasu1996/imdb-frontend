@@ -1,7 +1,6 @@
 
-import { Routes ,Route} from 'react-router-dom';
+import { Routes ,Route, Router} from 'react-router-dom';
 import './App.css';
-import Layout from './components/Layout/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
@@ -10,6 +9,7 @@ import Movieslists from './components/pages/Movieslists';
 import Editmovies from './components/pages/Editmovies';
 import { createContext, useState } from 'react';
 import Sidebar from './components/Layout/Sidebar';
+import SingleMovie from './components/pages/SingleMovie';
 
 export const mycontext=createContext()
 
@@ -23,9 +23,12 @@ const [searchMovies,setSearchMovies]=useState("")
       <Routes>
   <Route path='/' element={<Movieslists/>}/>
     <Route path='/register' element={<Register/>}/>
+ <Route path='/singleMovieDetails/:movieId' element={<SingleMovie/>}/>
     <Route path='/sidebar' element={<Sidebar/>}/>
+    <Route path='/addmovies' element={<Addmovies/>}/>
+  
     <Route path='/login' element={<Login/>}/>
-<Route path='/addmovies' element={<Addmovies/>}/>
+
 <Route path='/editmovie-details/:movieid' element={<Editmovies/>}/>
     </Routes>
     </mycontext.Provider>

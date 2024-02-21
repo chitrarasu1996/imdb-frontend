@@ -34,7 +34,7 @@ if(!token){
             {visible && (
               <>
                 <li>
-                  <button className='btn' onClick={logout}>
+                  <button style={{color:"white"}} className='btn' onClick={logout}>
                     Logout
                   </button>
                 </li>
@@ -42,14 +42,14 @@ if(!token){
               </>
             )}
             <li>
-              <Link style={{ textDecoration: "none", color: "black" }} to={"/"}>
-                Movie lists
+              <Link style={{ color:"white", textDecoration: "none"}} to={"/"}>
+                Movies lists
               </Link>
             </li>
             <hr />
             <li className='pt-2 pb-2'>
               <Link
-                style={{ textDecoration: "none", color: "black" }}
+                style={{color:"white", textDecoration: "none"}}
                 to={"/addmovies"}
               >
                 Add movies

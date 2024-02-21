@@ -1,7 +1,8 @@
 import axios from "axios"
+import { Util } from "reactstrap"
 
-const URL="https://imdb-backend-1ya2.onrender.com/"
-
+// const URL="https://imdb-backend-1ya2.onrender.com/"
+const URL="http://localhost:4000/"
 export const registerUser=async(userName,email,password)=>{
 try {
 
@@ -48,10 +49,10 @@ export const getTheAllActorsAndProducers=async()=>{
     
 }
 
-export  const createNewMovies=async(movieName, yearOfRelease, actors,producer,token)=>{
+export  const createNewMovies=async(movieName, yearOfRelease, actors,producer,token,imageBase64)=>{
     try {
         const res=await axios.post(URL+"movies/create-movies",{
-            movieName, yearOfRelease,actors,producer
+            movieName, yearOfRelease,actors,producer,imageBase64
         },{
             headers:{
                 token
@@ -69,6 +70,7 @@ export  const createNewMovies=async(movieName, yearOfRelease, actors,producer,to
 
 export const getAllMoviesLists=async()=>{
     try {
+    
         const res=await axios.get(URL+"movies/get-allmovies")
     return res
     } catch (error) {
@@ -86,10 +88,10 @@ export const getThePerticularMoviesDetails=async(id)=>{
   
 }
 
-export const updateTheMovieDetails=async(token,movieId,movieName,yearOfRelease,actors,producer)=>{
+export const updateTheMovieDetails=async(token,movieId,movieName,yearOfRelease,actors,producer,image)=>{
     try {
         const res=await axios.put(URL+`movies/updatethemoviesdetails/${movieId}`,{
-            movieName,yearOfRelease,actors,producer
+            movieName,yearOfRelease,actors,producer,image
         },
     {
         headers:{
