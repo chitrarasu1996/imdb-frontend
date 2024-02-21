@@ -1,8 +1,6 @@
 import axios from "axios"
 
-
-// const URL="https://imdb-backend-1ya2.onrender.com/"
-const URL="http://localhost:4000/"
+const URL="https://imdb-backend-1ya2.onrender.com/"
 export const registerUser=async(userName,email,password)=>{
 try {
 
