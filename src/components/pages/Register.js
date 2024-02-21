@@ -49,7 +49,8 @@ try {
   }
   return (
   <Layout>
-    <div className='form-container'>
+    <div style={{backgroundColor:"black",height:"100vh"}}>
+    <div className='form-container' >
     <div className='imdb-tittle mb-2'>IMDb</div>
      <div style={{border:"1px solid #DDDDDD"}} className='ps-5 pe-5 pt-3 pb-3'>
       <div className='pb-2'><h3>Create account</h3></div>
@@ -134,6 +135,7 @@ Already have an account? <span><Link to={"/login"}>login</Link></span>
 </Form>
 </div>
 </div>
+    </div>
     </div>
     </Layout> 
   )
