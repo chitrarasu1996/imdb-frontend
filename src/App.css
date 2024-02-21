@@ -34,14 +34,15 @@ font-weight: 600;
 }
 .form-container{
   display: flex;
-  padding-top: 20px;
+background-color:black;
   flex-wrap: wrap;
+  color: white;
   overflow-y: auto;
-  width: 60vw;
+  width: 100vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:93vh;
+  height:100vh !important;
 }
 
 .submit-btn{
@@ -102,41 +103,53 @@ background: black;
   gap:20px
 }
 
+
+.singlemoviesdetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: black;
+}
 @media only screen and (max-width: 600px) {
-  .sidebarAndMoviesDetails {
-    flex-direction: row;
-  }
+ 
   .form-container{
-    margin-left: 15px;
+    display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 90vh;
+overflow: auto;
+width: 100vw;
   }
 .singlemoviesdetails{
-padding-right: 50px !important;
-padding-left: 0 px !important;
-margin-left: 0px !important;
-width: 60vw;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-top: 80px;
+padding-bottom: 77px !important;
+margin: auto !important; 
+
+width: 100vw !important;
+
 }
 
+
+
+
  .all-movies-list{
+  background-color:black !important;
 overflow-y: auto;
 height: 92vh !important;
-  background-color:transparent !important;
- }
- .singlemoviesdetails{
-  width: 60vw;
-
-  max-height:500px;
-  overflow-y: auto;
-padding-right: 20px;
  }
 
   .col-md-3, .col-sm-3 {
     flex: 1;
   }
-  .movie-card {
-    width: 50vw !important;
-    margin-right: 18px;
-
-  }
+ 
   .col-md-9, .col-sm-9 {
     flex: 3;
   }

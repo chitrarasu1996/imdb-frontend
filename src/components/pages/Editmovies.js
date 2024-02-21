@@ -128,7 +128,7 @@ reader.onerror=(error)=>{
   }
   return (
     <Layout>
-      <div className=''>
+      <div >
       
         <div className='form-container '>
 <div className='pe-4 ps-4 pt-2 pb-4'  style={{ border: "1px solid #DDDDDD" }}>

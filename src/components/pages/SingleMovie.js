@@ -24,12 +24,14 @@ const SingleMovie = () => {
 
     return (
         <Layout>
-            {singleMovieDetail &&
-                <div style={{height:"90vh",overflow:"hidden", paddingBottom: "150px" }} className='singlemoviesdetails ps-5  mt-4 '>
 
-                    <div  >
-                        <div  className="card  " style={{overflow:"auto", width: "50vw" ,height:"86vh"}}>
-                            <img style={{ height: "250px" }} className="card-img-top" src={singleMovieDetail.image}  alt="movie image" />
+        
+            {singleMovieDetail &&
+                <div style={{height:"100vh",overflow:"hidden"}} className='singlemoviesdetails ps-5 '>
+
+                    <div  style={{paddingBottom:"56px",height:"98vh",overflow:"auto"}} >
+                        <div className='card mt-2' style={{ width: "80vw" }}>
+                            <img style={{ height: "180px" }} className="card-img-top" src={singleMovieDetail.image}  alt="movie image" />
                             <div style={{ backgroundColor: "#2F2B29", color: "white" }} className="card-body">
                                 <p style={{ fontWeight: "500", lineHeight: "25px" }} className="card-title">{singleMovieDetail.movieName}</p>
                                 <hr />
@@ -43,11 +45,11 @@ const SingleMovie = () => {
                                 <hr/>
 
                                 <p style={{ fontWeight: "500", lineHeight: "25px" }}>producer <span className='details'> {singleMovieDetail && singleMovieDetail.producer && singleMovieDetail.producer.producerName}</span></p>
-                                <p><Link to={`/editmovie-details/${singleMovieDetail._id}`}> <button className='btn btn-primary'><MdEdit /> edit</button></Link> </p>
+                                <p className='mb-0'><Link to={`/editmovie-details/${singleMovieDetail._id}`}> <button className='btn btn-primary'><MdEdit /> edit</button></Link> </p>
                             </div>
                         </div>
                     </div>
-                    <div></div>
+                
                 </div>
             }
         </Layout>

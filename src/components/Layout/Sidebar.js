@@ -20,9 +20,6 @@ if(!token){
     localStorage.removeItem("token");
     setToken("");
     navigate("/login");
-    setTimeout(() => {
-      toast.success("Logout successfully");
-    }, 2000)
   
   };
 

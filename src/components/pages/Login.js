@@ -35,10 +35,7 @@ const Login = () => {
           if(response.data.result){
             localStorage.setItem("token",response.data.token)
             setToken(response.data.token)
-            navigate("/")
-          setTimeout(() => {
-          toast.success(response.data.message)
-          }, 2000);
+            navigate("/") 
         }else if(!response.data.result){
           toast.error(response.data.message)
         } 

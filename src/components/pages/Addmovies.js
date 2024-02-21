@@ -117,9 +117,9 @@ reader.onerror=(error)=>{
   }
   return (
     <Layout>
-      <div className='form-container'>
-        <div style={{ border: "1px solid #DDDDDD" }} className='ps-5 pe-5 pt-3 pb-3'>
-          <div className='pb-2 text-center'><h3>Add movies</h3></div>
+      <div  className='form-container pb-5'>
+        <div style={{ border: "1px solid #DDDDDD" }} className='ps-3 pe-3 pb-3'>
+          <div className='p-2 text-center'><h3>Add Movies</h3></div>
           <div>
             <Form onSubmit={submitted}>
               <FormGroup>
@@ -177,7 +177,7 @@ hidden
                 >
                   Password
                 </Label>
-                <Select style={{maxWidth:"250px",maxHeight:"60px",overflow:"auto"}} className='form-select mb-3'
+                <Select style={{maxWidth:"100%",maxHeight:"60px",overflow:"auto"}} className='form-select mb-3'
                  bordered={false} 
                  size='large'
                  
