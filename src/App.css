@@ -3,7 +3,7 @@
 
 
 .App{
-overflow-x: hidden;
+overflow: hidden;
 height: 100vh;
  font-family: 'Roboto', sans-serif;
 }
@@ -75,13 +75,22 @@ Link:hover{
 }
 .all-movies-list{
   background-color:black;
-  height: 100vh;
+  height: 92vh;
   overflow: auto;
 
 }
-.all-movies-list::-webkit-scrollbar-thumb {
-  background: #888 !important;
+.all-movies-list::-webkit-scrollbar{
+width: 15px !important;
+height: 15px !important; 
 }
+.all-movies-list::-webkit-scrollbar-track {
+background: black;
+  }
+ 
+  .all-movies-list::-webkit-scrollbar-thumb {
+    background: #252525;
+      }
+
 .total-movies{
   display: flex;
   flex-wrap: wrap;
@@ -101,21 +110,23 @@ Link:hover{
     margin-left: 15px;
   }
 .singlemoviesdetails{
-  background-color: red !important;
-
+padding-right: 50px !important;
+padding-left: 0 px !important;
+margin-left: 0px !important;
+width: 60vw;
 }
 
  .all-movies-list{
-
+overflow-y: auto;
+height: 92vh !important;
   background-color:transparent !important;
  }
  .singlemoviesdetails{
-  width: 50vw;
+  width: 60vw;
+
   max-height:500px;
   overflow-y: auto;
-.card{
-  width: "50vw"
-}
+padding-right: 20px;
  }
 
   .col-md-3, .col-sm-3 {

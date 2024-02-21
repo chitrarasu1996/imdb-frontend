@@ -25,7 +25,7 @@ const SingleMovie = () => {
     return (
         <Layout>
             {singleMovieDetail &&
-                <div style={{height:"90vh", paddingBottom: "150px" }} className='singlemoviesdetails ps-5 ms-5 me-4 mt-4 '>
+                <div style={{height:"90vh",overflow:"hidden", paddingBottom: "150px" }} className='singlemoviesdetails ps-5  mt-4 '>
 
                     <div  >
                         <div  className="card  " style={{overflow:"auto", width: "50vw" ,height:"86vh"}}>
