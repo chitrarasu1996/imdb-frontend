@@ -15,7 +15,6 @@ const Movieslists = () => {
 
   useEffect(() => {
     if (searchMovies.length > 0) {
-      console.log("called")
       findMovieBaesdOnSearch()
     } else {
       getAllMovies()
@@ -55,7 +54,6 @@ const Movieslists = () => {
     try {
 
       const res = await getAllMoviesLists()
-      console.log(res.data.allMovies)
       setAllMovies(res.data.allMovies)
     } catch (error) {
       console.log(error)
@@ -65,7 +63,7 @@ const Movieslists = () => {
   return (
 
     <Layout>
-      <div className='all-movies-list p-2 text-white'>
+      <div className='all-movies-list ps-5 p-2 text-white'>
         <div>
           {allMovies.length > 0 ? (
             <div className='movie-container ps-4'>

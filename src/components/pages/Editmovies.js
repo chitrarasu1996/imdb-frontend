@@ -42,7 +42,7 @@ const Editmovies = () => {
   const getTheMovieDetails = async () => {
     try {
       const res = await getThePerticularMoviesDetails(movieid)
-console.log(res.data)
+
       if (res.data.result) {
       
         setMoviesDeatils({
@@ -128,10 +128,10 @@ reader.onerror=(error)=>{
   }
   return (
     <Layout>
-      <div >
-      
-        <div className='form-container '>
-<div className='pe-4 ps-4 pt-2 pb-4'  style={{ border: "1px solid #DDDDDD" }}>
+      <div style={{height:"100vh",backgroundColor:"black"}}>
+
+        <div className='form-container pt-0'>
+<div className='pe-4 ps-4 pt-2 pb-2'  style={{ border: "1px solid #DDDDDD" }}>
           <div   className='pb-2 text-center'><h3>Edit movies</h3></div>
        
           <div>

@@ -25,12 +25,12 @@ const SingleMovie = () => {
     return (
         <Layout>
 
-        
+        <div style={{backgroundColor:"black",height:"100vh"}}>
             {singleMovieDetail &&
                 <div style={{height:"100vh",overflow:"hidden"}} className='singlemoviesdetails ps-5 '>
 
-                    <div  style={{paddingBottom:"56px",height:"98vh",overflow:"auto"}} >
-                        <div className='card mt-2' style={{ width: "80vw" }}>
+                    <div  style={{paddingBottom:"56px",overflow:"auto"}} >
+                        <div className='card' style={{ width: "80vw" }}>
                             <img style={{ height: "180px" }} className="card-img-top" src={singleMovieDetail.image}  alt="movie image" />
                             <div style={{ backgroundColor: "#2F2B29", color: "white" }} className="card-body">
                                 <p style={{ fontWeight: "500", lineHeight: "25px" }} className="card-title">{singleMovieDetail.movieName}</p>
@@ -52,6 +52,7 @@ const SingleMovie = () => {
                 
                 </div>
             }
+            </div>
         </Layout>
 
     )

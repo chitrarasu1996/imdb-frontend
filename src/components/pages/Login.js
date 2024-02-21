@@ -14,8 +14,9 @@ const Login = () => {
     email:""
   }) 
   useEffect(() => {
-      // Clear all toasts when the component unmounts
-      toast.dismiss(); 
+    if(token){
+      navigate("/")
+    }
   }, []);
   const verifyFields = () => {
     if (userDetails.password.length < 3) {
@@ -50,11 +51,12 @@ const Login = () => {
         }
   return (
     <Layout>
+      <div style={{backgroundColor:"black",height:"100vh",overflow:"auto"}}>
       {!token?
     <div className='form-container'>
     <div className='imdb-tittle mb-2'>IMDb</div>
      <div style={{border:"1px solid #DDDDDD"}} className='ps-5 pe-5 pt-3 pb-3'>
-      <div className='pb-2 text-center'><h3>Login</h3></div>
+      <div className='pb-2 text-center '><h3>Login</h3></div>
       <div>
       <Form onSubmit={submitted}>
   <FormGroup>
@@ -105,6 +107,7 @@ const Login = () => {
     </div>:
     <div className='old-user'>your already logged</div>
     }
+    </div>
     </Layout> 
   )
 }

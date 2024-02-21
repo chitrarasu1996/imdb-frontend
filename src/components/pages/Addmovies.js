@@ -91,10 +91,8 @@ navigate('/')
   setNewProducer("")
   setNewActors("")
       if(response.data.result){
-      toast.success(response.data.message)
    getAllActors()
     }else{
-
       toast.error(response.data.message)
     }
     } catch (error) {
@@ -106,7 +104,7 @@ navigate('/')
     const reader=new FileReader;
 reader.readAsDataURL(image)
     reader.onload=()=>{
-      console.log(reader.result,"result")
+
          setMoviesDetails({...moviesDetails,imageBase64:reader.result})
     }
 reader.onerror=(error)=>{
@@ -117,7 +115,8 @@ reader.onerror=(error)=>{
   }
   return (
     <Layout>
-      <div  className='form-container pb-5'>
+      <div style={{height:"100vh",backgroundColor:"black",maxWidth:"100vw"}}>
+      <div  className='form-container'>
         <div style={{ border: "1px solid #DDDDDD" }} className='ps-3 pe-3 pb-3'>
           <div className='p-2 text-center'><h3>Add Movies</h3></div>
           <div>
@@ -160,7 +159,7 @@ reader.onerror=(error)=>{
               <FormGroup>
 
 <label  onChange={(e)=>uploadImage(e.target.files[0])} style={{width:"100%"}} className='btn btn-outline-primary'>
-  {imageName?imageName: "upload Image"}
+  {imageName?`${imageName.substring(0,9)}...img`: "upload Image"}
 <Input 
 
 placeholder='upload Img'
@@ -231,6 +230,7 @@ hidden
             </Form>
           </div>
         </div>
+      </div>
       </div>
     </Layout>
   )
